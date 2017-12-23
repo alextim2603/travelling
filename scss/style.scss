@@ -1,0 +1,438 @@
+@import "normalize.scss";
+@import "layout.scss";
+@import "slick";
+//@import "slick-theme";
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700,800,900i');
+
+$text-color: #333;
+$primary-color: #FFCC00;
+$body-font: 'Poppins', sans-serif;
+$header-font: Roboto, sans-serif;
+
+body{
+	font-family: 'Poppins', sans-serif;
+	color:  #303030;
+	font-size: 18px;/* Приближение из-за подстановки шрифтов */
+	font-weight: 600;
+	line-height: 19.17px;/* Приближение из-за подстановки шрифтов */
+	text-align: left;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	font: 700 14px/1.7 OpenSans, sans-serif;
+	height: 24px;
+	color:  #666666;
+	border: 1px solid $primary-color;
+	text-decoration: none;
+	padding: 0 12px 0;
+	max-width: 120px;
+	margin: 0 auto;
+
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+	//background-color: $primary-color;
+	color: #FFF;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	font: 700 14px/1.7 OpenSans, sans-serif;
+	height: 24px;
+	color:  #666666;
+	border: 1px solid $primary-color;
+	text-decoration: none;
+	padding: 0 12px 0;
+	max-width: 120px;
+	margin: 0 auto;
+
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+//	background-color: $primary-color;
+	color: #FFF;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+
+.slick-arrow{
+
+    background: none;
+    border-right: 0;
+    padding: 0;
+
+    position: absolute;
+    line-height: 0;
+    font-size: 0;
+    cursor: pointer;
+    bottom: -28%;
+    margin-top: -21px;
+    outline: none;
+    //color: $primary-color;
+    &:hover{
+      color: #000;
+    }
+    svg{
+      display: block;
+      height: 42px;
+      width: 96px;
+      fill: currentColor;
+    }
+}
+.ba-slider-prev{
+  right: 8%;
+}
+.ba-slider-next{
+  right: 0;
+}
+.slick-dots{
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+   margin: 0 0;
+   padding: 0;
+   list-style: none;
+   text-align: center;
+   li{
+     display: inline-block;
+     margin: 0 5px;
+   }
+   button{
+     border: 0;
+     background: transparent;
+     display: block;
+     width: 10px;
+     height: 10px;
+     //background-color: #fff;
+     //border: 1px solid #fff;
+     padding: 0;
+     border-radius: 50%;
+     outline: none;
+     line-height: 0;
+     font-size: 0;
+     color: transparent;
+     cursor: pointer;
+   }
+   .slick-active{
+     button{
+       background: transparent;
+     }
+   }
+}
+.ba-team .ba-team-slider .ba-slide {
+	margin-left: 44px;
+
+
+}
+
+	/*.ba-slider-next {
+	  transform-origin: right bottom;
+	  transform:
+	    rotate(90deg)
+	    translate(0, -100%)
+	    rotate(90deg)
+	    translate(0, 100%);
+	}*/
+	.ba-slider{
+		position: relative;
+		overflow: hidden;
+	}
+	.ba-slider:before {
+	    position: absolute;
+	    content: "";
+	    right: 0;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    background-color: red;
+	    visibility: hidden;
+	    opacity: 0;
+	    -webkit-transition: all .25s;
+	    -o-transition: all .25s;
+	    transition: all .25s;
+	}
+	.ba-slider :hover :before{
+		visibility: visible;
+		opacity: 1;
+		border-radius: 5px;
+
+	}
+	li,
+	.ba-container a {
+		list-style-type: none; /* Убираем маркеры */
+		display:inline-block;
+		text-decoration: none;
+		}
+	nav{
+		float: right;
+
+	}
+	.ba-logo{
+		float: left;
+	}
+	.ba-header{
+		background: #fff;
+		font-family: 'Raleway', sans-serif;
+		color:  #3f3e41;
+		font-size: 13px;/* Приближение из-за подстановки шрифтов */
+		font-weight: 700;
+		line-height: 7.488px;/* Приближение из-за подстановки шрифтов */
+		text-align: left;
+	}
+.ba-intro{
+	background: url(../img/intro-fon.jpg);
+	size: cover;
+	padding-top: 20%;
+	padding-bottom: 20%;
+	padding-left: 5%;
+	h3{
+		font-family: Raleway;
+		color:  #ffffff;
+		font-size: 38px;/* Приближение из-за подстановки шрифтов */
+		font-weight: 400;
+		line-height: 7.488px;/* Приближение из-за подстановки шрифтов */
+		text-align: left;
+	}
+	h1{
+		font-family: Raleway;
+		color:  #ffffff;
+		font-size: 100px;/* Приближение из-за подстановки шрифтов */
+		font-weight: 800;
+		line-height: 90px;/* Приближение из-за подстановки шрифтов */
+		text-align: left;
+	}
+	p{
+		font-family: Raleway;
+		color:  #ffffff;
+		font-size: 19px;/* Приближение из-за подстановки шрифтов */
+		font-weight: 700;
+		line-height: 28px;/* Приближение из-за подстановки шрифтов */
+		text-align: left;
+	}
+}
+.ba-exciting-destinations{
+	background: url(../img/second-fon.jpg);
+	size: cover;
+	h2{
+		font-family: 'Raleway';
+		color:  #fd5c08;
+		font-size: 80px;/* Приближение из-за подстановки шрифтов */
+		font-weight: 800;
+		line-height: 40px;
+	}
+	h4{
+		font-family: 'Raleway';
+		color:  #3f3e41;
+		font-size: 34px;/* Приближение из-за подстановки шрифтов */
+		font-weight: 400;
+		line-height: 40px;
+	}
+	p{
+		font-family: 'Raleway';
+		color:  #3f3e41;
+		font-size: 19px;/* Приближение из-за подстановки шрифтов */
+		font-weight: 700;
+		line-height: 28px;/* Приближение из-за подстановки шрифтов */
+		text-align: left;
+	}
+	.ba-row{
+		display: inline-block;
+	}
+
+	.izo:hover,
+	.izo-2:hover,
+	.izo-3:hover,
+	.izo-4:hover {
+	  background: url(../img/img-fon.png) no-repeat;
+	  -moz-transition: all 1s ease-in-out;
+	  -webkit-transition: all 1s ease-in-out;
+	  -o-transition: all 1s ease-in-out;
+	  transition: all 1s ease-in-out;
+	  opacity: 0.5; }
+
+
+	img .izo{
+		width: 30%;
+	}
+}
+
+.ba-offers{
+	background: url(../img/offers-fon.jpg);
+	size: cover;
+	padding-bottom: 26%;
+	.ba-grid{
+
+		    background: #fff;
+	}
+}
+.ba-find{
+	background: #FFF url(../img/find-fon.jpg);
+	size: cover;
+	text-align: center;
+}
+.ba-long{
+	background: #FFF url(../img/long-fon.jpg);
+	.ba-long-one{
+		background: #FD5C08;
+		color: white;
+		width: 24%;
+		h3{
+			font-family: 'Raleway';
+			color:  #ffffff;
+			font-size: 38px;/* Приближение из-за подстановки шрифтов */
+			font-weight: 700;
+			line-height: 40px;/* Приближение из-за подстановки шрифтов */
+			text-align: left;
+		}
+		p{
+			font-family: 'Raleway', sans-serif;
+			color:  #ffffff;
+			font-size: 16px;/* Приближение из-за подстановки шрифтов */
+			font-weight: 700;
+			line-height: 21px;/* Приближение из-за подстановки шрифтов */
+			text-align: left;
+		}
+	}
+	.taiwan{
+		background: #FFF;
+		width: 80%;
+		h4{
+			font-family: 'Raleway', sans-serif;
+			color:  #fd5c08;
+			font-size: 30px;/* Приближение из-за подстановки шрифтов */
+			font-weight: 400;
+			line-height: 28px;/* Приближение из-за подстановки шрифтов */
+			text-align: left;
+		}
+		p{
+			font-family: 'Raleway';
+			color:  #3f3e41;
+			font-size: 16px;/* Приближение из-за подстановки шрифтов */
+			font-weight: 400;
+			line-height: 38px;/* Приближение из-за подстановки шрифтов */
+			text-align: left;
+		}
+		.ba-first-taiwain{
+			width: 70%;
+		}
+		.ba-second-taiwain{
+			width: 20%;
+		}
+	}
+
+}
+.ba-find{
+	font-family: 'Raleway';
+	color:  #fd5c08;
+	font-size: 80px;/* Приближение из-за подстановки шрифтов */
+	font-weight: 800;
+	line-height: 80px;/* Приближение из-за подстановки шрифтов */
+	text-align: center;
+	h4{
+		font-family: 'Raleway';
+		color:  #3f3e41;
+		font-size: 34px;/* Приближение из-за подстановки шрифтов */
+		font-weight: 400;
+		line-height: 40px;/* Приближение из-за подстановки шрифтов */
+		text-align: center;
+	}
+}
+.ba-footer{
+	background: #FD5C08;
+	img{
+		float: right;
+	}
+	p{
+		font-family: Raleway;
+		color:  #ffffff;
+		font-size: 10px;/* Приближение из-за подстановки шрифтов */
+		font-weight: 400;
+		line-height: 16px;/* Приближение из-за подстановки шрифтов */
+		text-align: right;
+	}
+}
